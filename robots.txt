@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://growthbymayank.github.io/growthbymayank-cmyk.github.io/sitemap.xml
