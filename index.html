@@ -1,0 +1,3455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Mayank Rajwanshi — AI, Digital Marketing, Social Media, SEO, Creative Design and Content Creation."
+  />
+
+  <meta
+    name="keywords"
+    content="Mayank Rajwanshi, AI, Digital Marketing, Social Media, SEO, Meta Ads, Google Ads, AI Content Creation, Creative Design"
+  />
+
+  <meta name="author" content="Mayank Rajwanshi" />
+  <meta name="theme-color" content="#f7f8fc" />
+
+  <meta property="og:title" content="Mayank Rajwanshi — AI × Digital Marketing" />
+  <meta
+    property="og:description"
+    content="AI-powered creativity, social media and digital marketing strategies."
+  />
+  <meta property="og:type" content="website" />
+
+  <title>Mayank Rajwanshi — AI × Digital Marketing</title>
+
+  <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background: #f7f8fc;
+      color: #111114;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    body.loading {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ::selection {
+      background: #111114;
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    :root {
+      --black: #111114;
+      --white: #ffffff;
+      --muted: #707079;
+      --line: rgba(17, 17, 20, 0.12);
+      --soft: rgba(17, 17, 20, 0.055);
+      --purple: #7357ff;
+      --blue: #438cff;
+      --pink: #ff5db1;
+      --green: #16b96d;
+    }
+
+    .container {
+      width: min(1240px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    section {
+      position: relative;
+      padding: 150px 0;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      color: #73737c;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #111114;
+    }
+
+    .section-title {
+      font-size: clamp(48px, 7vw, 94px);
+      line-height: 0.92;
+      letter-spacing: -0.065em;
+      font-weight: 850;
+      max-width: 950px;
+    }
+
+    .gradient-text {
+      background:
+        linear-gradient(
+          100deg,
+          #111114 0%,
+          #7357ff 35%,
+          #438cff 65%,
+          #ff5db1 100%
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* =========================================================
+       INTRO / NAME ANIMATION
+    ========================================================= */
+
+    .intro-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(
+          circle at 50% 45%,
+          rgba(115, 87, 255, 0.11),
+          transparent 30%
+        ),
+        #f7f8fc;
+
+      transition:
+        opacity 0.9s cubic-bezier(.77, 0, .18, 1),
+        visibility 0.9s ease;
+    }
+
+    .intro-screen.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .intro-content {
+      width: min(1100px, 90%);
+      text-align: center;
+    }
+
+    .intro-small {
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      font-weight: 800;
+      color: #7b7b83;
+      margin-bottom: 24px;
+
+      opacity: 0;
+      transform: translateY(20px);
+
+      animation:
+        introSmall 0.8s 0.2s forwards
+        cubic-bezier(.16,1,.3,1);
+    }
+
+    .intro-name {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+
+      font-size: clamp(70px, 15vw, 190px);
+      line-height: 0.85;
+      letter-spacing: -0.085em;
+      font-weight: 900;
+    }
+
+    .intro-name span {
+      display: inline-block;
+
+      opacity: 0;
+      transform:
+        translateY(120%)
+        rotate(8deg);
+
+      animation:
+        introLetter 1s forwards
+        cubic-bezier(.16,1,.3,1);
+    }
+
+    .intro-name span:nth-child(1) {
+      animation-delay: 0.25s;
+    }
+
+    .intro-name span:nth-child(2) {
+      animation-delay: 0.31s;
+    }
+
+    .intro-name span:nth-child(3) {
+      animation-delay: 0.37s;
+    }
+
+    .intro-name span:nth-child(4) {
+      animation-delay: 0.43s;
+    }
+
+    .intro-name span:nth-child(5) {
+      animation-delay: 0.49s;
+    }
+
+    .intro-name span:nth-child(6) {
+      animation-delay: 0.55s;
+    }
+
+    .intro-name span:nth-child(7) {
+      animation-delay: 0.61s;
+    }
+
+    .intro-line {
+      width: min(300px, 70%);
+      height: 2px;
+      background: rgba(17,17,20,.1);
+      margin: 35px auto 0;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .intro-line span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: #111114;
+
+      animation:
+        introProgress 2.1s 0.25s forwards
+        cubic-bezier(.16,1,.3,1);
+    }
+
+    @keyframes introSmall {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes introLetter {
+      to {
+        opacity: 1;
+        transform:
+          translateY(0)
+          rotate(0);
+      }
+    }
+
+    @keyframes introProgress {
+      to {
+        width: 100%;
+      }
+    }
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      height: 88px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 28px;
+
+      transition:
+        background .35s ease,
+        backdrop-filter .35s ease,
+        height .35s ease;
+    }
+
+    .navbar.scrolled {
+      height: 72px;
+      background: rgba(247,248,252,.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(17,17,20,.08);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.055em;
+    }
+
+    .logo-dot {
+      color: #7357ff;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .nav-links a {
+      position: relative;
+
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      color: #6d6d75;
+
+      transition:
+        color .25s ease,
+        transform .25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+
+      width: 0;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #7357ff,
+          #438cff,
+          #ff5db1
+        );
+
+      transition: width .35s cubic-bezier(.16,1,.3,1);
+    }
+
+    .nav-links a:hover {
+      color: #111114;
+      transform: translateY(-2px);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-talk {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 42px;
+      padding: 0 20px;
+
+      border-radius: 100px;
+
+      background: #111114;
+      color: #ffffff;
+
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .nav-talk:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(17,17,20,.18);
+    }
+
+    .menu-btn {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+
+      border: 1px solid rgba(17,17,20,.12);
+      background: rgba(255,255,255,.7);
+      border-radius: 50%;
+
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .menu-icon span {
+      display: block;
+      width: 17px;
+      height: 1.5px;
+      background: #111114;
+      transition: .3s ease;
+    }
+
+    .menu-btn.active .menu-icon span:nth-child(1) {
+      transform: translateY(5.5px) rotate(45deg);
+    }
+
+    .menu-btn.active .menu-icon span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-btn.active .menu-icon span:nth-child(3) {
+      transform: translateY(-5.5px) rotate(-45deg);
+    }
+
+    .mobile-links {
+      position: fixed;
+      z-index: 999;
+
+      top: 88px;
+      left: 14px;
+      right: 14px;
+
+      padding: 12px;
+
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(22px);
+
+      border: 1px solid rgba(17,17,20,.1);
+      border-radius: 22px;
+
+      display: flex;
+      flex-direction: column;
+
+      transform:
+        translateY(-20px)
+        scale(.98);
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition:
+        opacity .3s ease,
+        transform .3s ease,
+        visibility .3s ease;
+    }
+
+    .mobile-links.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .mobile-links a {
+      padding: 18px;
+      border-radius: 14px;
+
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .13em;
+    }
+
+    .mobile-links a:hover {
+      background: #f0f0f5;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+
+      padding-top: 140px;
+
+      background:
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(115,87,255,.10),
+          transparent 25%
+        );
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+
+      opacity: .55;
+
+      background-image:
+        linear-gradient(
+          rgba(17,17,20,.045) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(17,17,20,.045) 1px,
+          transparent 1px
+        );
+
+      background-size: 70px 70px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent 85%
+        );
+    }
+
+    .aurora {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+
+      filter: blur(80px);
+      opacity: .17;
+
+      pointer-events: none;
+
+      animation: auroraFloat 8s ease-in-out infinite alternate;
+    }
+
+    .aurora-one {
+      background: #7357ff;
+      right: -100px;
+      top: 15%;
+    }
+
+    .aurora-two {
+      background: #ff5db1;
+      left: -160px;
+      bottom: 5%;
+      animation-delay: -3s;
+    }
+
+    @keyframes auroraFloat {
+      from {
+        transform: translate3d(0,0,0) scale(1);
+      }
+
+      to {
+        transform: translate3d(30px,-30px,0) scale(1.1);
+      }
+    }
+
+    .hero-orb {
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      border-radius: 50%;
+
+      right: 13%;
+      top: 29%;
+
+      background:
+        radial-gradient(
+          circle at 35% 30%,
+          rgba(255,255,255,.95),
+          rgba(115,87,255,.42) 28%,
+          rgba(67,140,255,.18) 55%,
+          transparent 72%
+        );
+
+      filter: blur(1px);
+
+      opacity: .75;
+
+      animation:
+        orbFloat 7s ease-in-out infinite alternate;
+
+      pointer-events: none;
+    }
+
+    @keyframes orbFloat {
+      from {
+        transform: translate(0,0) rotate(0deg);
+      }
+
+      to {
+        transform: translate(-40px,35px) rotate(15deg);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+    }
+
+    .hero-title {
+      font-size: clamp(62px, 9vw, 130px);
+      line-height: .86;
+      letter-spacing: -.075em;
+      font-weight: 900;
+      margin-bottom: 35px;
+    }
+
+    .hero-title span {
+      display: block;
+      overflow: hidden;
+    }
+
+    .hero-title b {
+      display: inline-block;
+
+      opacity: 0;
+      transform: translateY(100px);
+
+      animation:
+        heroText .9s forwards
+        cubic-bezier(.16,1,.3,1);
+    }
+
+    .hero-title span:nth-child(1) b {
+      animation-delay: 2.25s;
+    }
+
+    .hero-title span:nth-child(2) b {
+      animation-delay: 2.38s;
+    }
+
+    .hero-title span:nth-child(3) b {
+      animation-delay: 2.51s;
+    }
+
+    @keyframes heroText {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-copy {
+      max-width: 630px;
+
+      font-size: 17px;
+      line-height: 1.75;
+      color: #696971;
+
+      margin-bottom: 35px;
+
+      opacity: 0;
+      transform: translateY(25px);
+
+      animation:
+        fadeUp .8s 2.7s forwards
+        cubic-bezier(.16,1,.3,1);
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+
+      opacity: 0;
+      transform: translateY(20px);
+
+      animation:
+        fadeUp .8s 2.9s forwards
+        cubic-bezier(.16,1,.3,1);
+    }
+
+    .btn {
+      position: relative;
+
+      min-height: 54px;
+      padding: 0 25px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 100px;
+
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .13em;
+
+      overflow: hidden;
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .btn span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn-primary {
+      background: #111114;
+      color: #ffffff;
+    }
+
+    .btn-primary::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          100deg,
+          #7357ff,
+          #438cff,
+          #ff5db1
+        );
+
+      transform: translateX(-105%);
+      transition: transform .45s cubic-bezier(.16,1,.3,1);
+    }
+
+    .btn-primary:hover::before {
+      transform: translateX(0);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 35px rgba(17,17,20,.15);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.65);
+      border: 1px solid rgba(17,17,20,.13);
+      color: #111114;
+    }
+
+    .availability {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-top: 28px;
+
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      color: #777780;
+
+      opacity: 0;
+
+      animation:
+        fadeUp .8s 3.05s forwards
+        cubic-bezier(.16,1,.3,1);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+
+      box-shadow:
+        0 0 0 5px rgba(22,185,109,.12);
+
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      50% {
+        box-shadow:
+          0 0 0 9px rgba(22,185,109,0);
+      }
+    }
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about {
+      background: #ffffff;
+    }
+
+    .about-grid {
+      margin-top: 80px;
+
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .about-copy {
+      max-width: 700px;
+      color: #62626a;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .about-copy strong {
+      color: #111114;
+    }
+
+    .experience-card {
+      padding: 50px;
+
+      border-radius: 28px;
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(115,87,255,.14),
+          transparent 40%
+        ),
+        #f7f8fc;
+
+      border: 1px solid rgba(17,17,20,.08);
+    }
+
+    .experience-number {
+      font-size: clamp(80px, 10vw, 130px);
+      line-height: .8;
+      font-weight: 900;
+      letter-spacing: -.08em;
+    }
+
+    .experience-label {
+      margin-top: 25px;
+
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .2em;
+      color: #74747d;
+    }
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services-list {
+      margin-top: 80px;
+      border-top: 1px solid var(--line);
+    }
+
+    .service {
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 80px 1.1fr 1fr 60px;
+      align-items: center;
+
+      gap: 30px;
+
+      padding: 32px 0;
+
+      border-bottom: 1px solid var(--line);
+
+      transition:
+        padding .4s ease,
+        background .4s ease;
+    }
+
+    .service::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(115,87,255,.06),
+          rgba(67,140,255,.025),
+          transparent
+        );
+
+      transform: scaleX(0);
+      transform-origin: left;
+
+      transition: transform .45s ease;
+
+      z-index: -1;
+    }
+
+    .service:hover {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+
+    .service:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-number {
+      color: #aaaab0;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .service-title {
+      font-size: 25px;
+      font-weight: 850;
+      letter-spacing: -.04em;
+    }
+
+    .service-description {
+      color: #777780;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .service-arrow {
+      width: 44px;
+      height: 44px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid var(--line);
+      border-radius: 50%;
+
+      transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+    }
+
+    .service:hover .service-arrow {
+      transform: rotate(45deg);
+      background: #111114;
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills {
+      background: #111114;
+      color: #ffffff;
+    }
+
+    .skills .eyebrow {
+      color: #8d8d97;
+    }
+
+    .skills .eyebrow::before {
+      background: #ffffff;
+    }
+
+    .skills-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-top: 70px;
+    }
+
+    .skill {
+      padding: 18px 24px;
+
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 100px;
+
+      color: rgba(255,255,255,.78);
+
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+
+      transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+    }
+
+    .skill:hover {
+      background: #ffffff;
+      color: #111114;
+      transform: translateY(-5px) rotate(-1deg);
+    }
+
+    /* =========================================================
+       WORK
+    ========================================================= */
+
+    #work {
+      background: #f7f8fc;
+    }
+
+    .portfolio-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+      gap: 25px;
+
+      margin-top: 80px;
+    }
+
+    .project {
+      position: relative;
+      overflow: hidden;
+
+      border-radius: 25px;
+
+      background: #ffffff;
+
+      border: 1px solid rgba(17,17,20,.08);
+
+      transition:
+        transform .5s cubic-bezier(.16,1,.3,1),
+        box-shadow .5s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(17,17,20,.12);
+    }
+
+    .project-image {
+      height: 430px;
+
+      background-size: cover;
+      background-position: center;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-image::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(115,87,255,.55),
+          rgba(67,140,255,.15),
+          rgba(255,93,177,.4)
+        );
+
+      mix-blend-mode: multiply;
+
+      opacity: .5;
+
+      transition:
+        opacity .4s ease,
+        transform .6s ease;
+    }
+
+    .project:hover .project-image::after {
+      opacity: .8;
+      transform: scale(1.08);
+    }
+
+    .p1 {
+      background:
+        url("https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+    }
+
+    .p2 {
+      background:
+        url("https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+    }
+
+    .p3 {
+      background:
+        url("https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+    }
+
+    .p4 {
+      background:
+        url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+    }
+
+    .p5 {
+      background:
+        url("https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+    }
+
+    .p6 {
+      background:
+        url("https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+    }
+
+    .project-info {
+      padding: 25px;
+    }
+
+    .project-category {
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .18em;
+      color: #8a8a92;
+      margin-bottom: 10px;
+    }
+
+    .project-title {
+      font-size: 24px;
+      font-weight: 850;
+      letter-spacing: -.045em;
+    }
+
+    .project-view {
+      margin-top: 20px;
+
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .12em;
+    }
+
+    /* =========================================================
+       INSTAGRAM
+    ========================================================= */
+
+    .instagram {
+      background: #ffffff;
+    }
+
+    .instagram-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .insta-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+      gap: 16px;
+
+      margin-top: 70px;
+    }
+
+    .insta-card {
+      position: relative;
+      aspect-ratio: 1;
+
+      border-radius: 20px;
+      overflow: hidden;
+
+      background: #eee;
+    }
+
+    .insta-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition:
+        transform .7s cubic-bezier(.16,1,.3,1),
+        filter .5s ease;
+    }
+
+    .insta-card::after {
+      content: "VIEW INSTAGRAM ↗";
+
+      position: absolute;
+      inset: auto 15px 15px 15px;
+
+      padding: 14px;
+
+      border-radius: 100px;
+
+      text-align: center;
+
+      background: rgba(255,255,255,.9);
+      backdrop-filter: blur(10px);
+
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .13em;
+
+      transform: translateY(80px);
+      transition: transform .4s ease;
+    }
+
+    .insta-card:hover img {
+      transform: scale(1.08);
+      filter: saturate(1.2);
+    }
+
+    .insta-card:hover::after {
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       PROCESS
+    ========================================================= */
+
+    .process-track {
+      margin-top: 80px;
+
+      display: grid;
+      grid-template-columns:
+        repeat(6, minmax(0,1fr));
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-item {
+      padding: 32px 20px;
+      border-right: 1px solid var(--line);
+
+      transition:
+        background .35s ease,
+        transform .35s ease;
+    }
+
+    .process-item:last-child {
+      border-right: none;
+    }
+
+    .process-item:hover {
+      background: #ffffff;
+      transform: translateY(-5px);
+    }
+
+    .process-number {
+      font-size: 10px;
+      color: #9999a1;
+      font-weight: 800;
+      margin-bottom: 45px;
+    }
+
+    .process-name {
+      font-size: 16px;
+      font-weight: 850;
+      letter-spacing: -.02em;
+    }
+
+    /* =========================================================
+       WHY
+    ========================================================= */
+
+    .why-list {
+      margin-top: 75px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .why-item {
+      display: grid;
+
+      grid-template-columns: .7fr 1fr;
+
+      gap: 50px;
+
+      padding: 34px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .why-title {
+      font-size: 25px;
+      font-weight: 850;
+      letter-spacing: -.04em;
+    }
+
+    .why-copy {
+      max-width: 600px;
+      color: #777780;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .cta {
+      background: #111114;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .cta .eyebrow {
+      color: #8d8d97;
+    }
+
+    .cta .eyebrow::before {
+      background: #ffffff;
+    }
+
+    .cta-inner {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .cta-title {
+      font-size: clamp(60px, 10vw, 125px);
+      line-height: .85;
+      letter-spacing: -.08em;
+      font-weight: 900;
+
+      margin-bottom: 35px;
+    }
+
+    .cta-copy {
+      max-width: 600px;
+      margin: 0 auto 35px;
+
+      color: #9a9aa2;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .cta-buttons {
+      justify-content: center;
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+
+    .cta .btn-secondary {
+      color: #ffffff;
+      border-color: rgba(255,255,255,.18);
+      background: rgba(255,255,255,.04);
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    #contact {
+      background: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+      gap: 15px;
+
+      margin-top: 75px;
+    }
+
+    .contact-card {
+      display: grid;
+
+      grid-template-columns: 55px 1fr 40px;
+
+      align-items: center;
+
+      gap: 20px;
+
+      padding: 25px;
+
+      border: 1px solid var(--line);
+      border-radius: 22px;
+
+      transition:
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+      background: #f7f8fc;
+      box-shadow: 0 20px 45px rgba(17,17,20,.08);
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #111114;
+      color: #ffffff;
+
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .contact-name {
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .18em;
+      color: #898991;
+      margin-bottom: 5px;
+    }
+
+    .contact-value {
+      font-size: 14px;
+      font-weight: 750;
+      word-break: break-word;
+    }
+
+    .contact-arrow {
+      font-size: 20px;
+      transition: transform .3s ease;
+    }
+
+    .contact-card:hover .contact-arrow {
+      transform: translate(4px,-4px);
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 45px 0 30px;
+      background: #111114;
+      color: #ffffff;
+    }
+
+    .footer-logo {
+      font-size: clamp(80px, 15vw, 190px);
+      line-height: .75;
+      font-weight: 900;
+      letter-spacing: -.09em;
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      margin-top: 55px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,.12);
+
+      color: #777780;
+
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    /* =========================================================
+       BACK TOP
+    ========================================================= */
+
+    .back-top {
+      position: fixed;
+
+      right: 25px;
+      bottom: 25px;
+
+      z-index: 500;
+
+      width: 50px;
+      height: 50px;
+
+      border: 0;
+      border-radius: 50%;
+
+      background: #111114;
+      color: #ffffff;
+
+      cursor: pointer;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transform: translateY(20px);
+
+      transition:
+        opacity .3s ease,
+        visibility .3s ease,
+        transform .3s ease;
+    }
+
+    .back-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-top:hover {
+      transform: translateY(-5px);
+    }
+
+    /* =========================================================
+       REVEAL
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(45px);
+
+      transition:
+        opacity .9s cubic-bezier(.16,1,.3,1),
+        transform .9s cubic-bezier(.16,1,.3,1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1000px) {
+
+      .nav-links {
+        gap: 18px;
+      }
+
+      .nav-talk {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-track {
+        grid-template-columns:
+          repeat(3, minmax(0,1fr));
+      }
+
+      .process-item:nth-child(3) {
+        border-right: none;
+      }
+
+      .process-item:nth-child(-n+3) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .service {
+        grid-template-columns: 55px 1fr 45px;
+      }
+
+      .service-description {
+        grid-column: 2;
+      }
+
+      .service-arrow {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+      }
+    }
+
+    @media (max-width: 760px) {
+
+      section {
+        padding: 100px 0;
+      }
+
+      .container {
+        width: min(100% - 32px, 1240px);
+      }
+
+      .navbar {
+        height: 72px;
+        padding: 0 16px;
+      }
+
+      .navbar.scrolled {
+        height: 66px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mobile-links {
+        top: 80px;
+      }
+
+      .hero {
+        min-height: 100svh;
+        padding-top: 120px;
+      }
+
+      .hero-orb {
+        width: 130px;
+        height: 130px;
+        right: -20px;
+        top: 23%;
+      }
+
+      .hero-title {
+        font-size: clamp(55px, 16vw, 100px);
+      }
+
+      .hero-copy {
+        font-size: 15px;
+      }
+
+      .section-title {
+        font-size: clamp(47px, 14vw, 75px);
+      }
+
+      .about-grid {
+        margin-top: 55px;
+        gap: 45px;
+      }
+
+      .experience-card {
+        padding: 35px;
+      }
+
+      .service {
+        grid-template-columns: 45px 1fr 40px;
+        gap: 12px;
+        padding: 25px 0;
+      }
+
+      .service-title {
+        font-size: 18px;
+      }
+
+      .service-description {
+        font-size: 13px;
+      }
+
+      .service:hover {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        margin-top: 55px;
+      }
+
+      .project-image {
+        height: 320px;
+      }
+
+      .instagram-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .insta-grid {
+        grid-template-columns:
+          repeat(2, minmax(0,1fr));
+        margin-top: 50px;
+      }
+
+      .insta-card {
+        border-radius: 15px;
+      }
+
+      .process-track {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-item {
+        border-right: 1px solid var(--line);
+      }
+
+      .process-item:nth-child(2n) {
+        border-right: none;
+      }
+
+      .process-item:nth-child(3),
+      .process-item:nth-child(4) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .why-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        line-height: 1.7;
+      }
+
+      .footer-logo {
+        font-size: 25vw;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .intro-name {
+        font-size: 20vw;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .insta-grid {
+        gap: 9px;
+      }
+
+      .process-track {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-item {
+        padding: 25px 15px;
+      }
+
+      .contact-card {
+        grid-template-columns: 48px 1fr 25px;
+        padding: 18px;
+      }
+
+      .contact-icon {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="loading">
+
+  <!-- =========================================================
+       INTRO
+  ========================================================== -->
+
+  <div class="intro-screen" id="introScreen">
+
+    <div class="intro-content">
+
+      <div class="intro-small">
+        WELCOME TO MY DIGITAL WORLD
+      </div>
+
+      <div class="intro-name" aria-label="Mayank">
+
+        <span>M</span>
+        <span>A</span>
+        <span>Y</span>
+        <span>A</span>
+        <span>N</span>
+        <span>K</span>
+
+      </div>
+
+      <div class="intro-line">
+        <span></span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <nav class="navbar" id="navbar">
+
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="Mayank Rajwanshi Home"
+    >
+      MAYANK<span class="logo-dot">.</span>
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="work.html">WORK</a>
+      <a href="process.html">PROCESS</a>
+      <a href="contact.html">CONTACT</a>
+
+    </div>
+
+    <a
+      class="nav-talk magnetic"
+      href="https://wa.me/917678616675"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LET'S TALK ↗
+    </a>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+
+      <span class="menu-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+
+    </button>
+
+  </nav>
+
+
+  <!-- MOBILE NAV -->
+
+  <div class="mobile-links" id="mobileLinks">
+
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="services.html">SERVICES</a>
+    <a href="work.html">WORK</a>
+    <a href="process.html">PROCESS</a>
+    <a href="contact.html">CONTACT</a>
+
+  </div>
+
+
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-grid"></div>
+
+      <div class="aurora aurora-one"></div>
+      <div class="aurora aurora-two"></div>
+
+      <div
+        class="hero-orb"
+        id="heroOrb"
+        aria-hidden="true"
+      ></div>
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            AI × DIGITAL MARKETING
+          </div>
+
+          <h1 class="hero-title">
+
+            <span>
+              <b>I TURN IDEAS</b>
+            </span>
+
+            <span>
+              <b>
+                INTO
+                <span class="gradient-text">DIGITAL</span>
+              </b>
+            </span>
+
+            <span>
+              <b>GROWTH.</b>
+            </span>
+
+          </h1>
+
+          <p class="hero-copy">
+            AI-powered creativity, social media and digital marketing
+            strategies built to help brands stand out, connect with
+            audiences and grow online.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="work.html"
+              class="btn btn-primary magnetic"
+            >
+              <span>VIEW MY WORK ↗</span>
+            </a>
+
+            <a
+              href="https://wa.me/917678616675"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary magnetic"
+            >
+              <span>LET'S WORK TOGETHER</span>
+            </a>
+
+          </div>
+
+          <div class="availability">
+
+            <span class="dot"></span>
+
+            AVAILABLE FOR PROJECTS
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         ABOUT
+    ======================================================== -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="eyebrow reveal">
+          01 / ABOUT
+        </div>
+
+        <h2 class="section-title reveal">
+          CREATIVE THINKING.<br>
+          <span class="gradient-text">AI POWERED.</span><br>
+          DIGITAL FOCUSED.
+        </h2>
+
+        <div class="about-grid">
+
+          <div class="about-copy reveal">
+
+            <p>
+              I'm <strong>Mayank Rajwanshi</strong>, an AI and
+              Digital Marketing professional focused on creating
+              engaging digital experiences, social media content
+              and growth-focused digital strategies.
+            </p>
+
+            <br>
+
+            <p>
+              My work combines
+              <strong>
+                AI, creative design, social media, SEO,
+                paid advertising and content creation
+              </strong>
+              to help build stronger and more effective
+              digital identities for brands.
+            </p>
+
+          </div>
+
+          <div class="experience-card reveal">
+
+            <div
+              class="experience-number"
+              id="experienceNumber"
+            >
+              00
+            </div>
+
+            <div class="experience-label">
+              YEAR EXPERIENCE
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         SERVICES
+    ======================================================== -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="eyebrow reveal">
+          02 / SERVICES
+        </div>
+
+        <h2 class="section-title reveal">
+          WHAT I BRING<br>
+          <span class="gradient-text">
+            TO THE TABLE.
+          </span>
+        </h2>
+
+        <div class="services-list">
+
+          <div class="service reveal">
+
+            <div class="service-number">01</div>
+
+            <div class="service-title">
+              AI CONTENT CREATION
+            </div>
+
+            <div class="service-description">
+              AI-generated product visuals, creative concepts,
+              images and video content.
+            </div>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">02</div>
+
+            <div class="service-title">
+              SOCIAL MEDIA
+            </div>
+
+            <div class="service-description">
+              Content planning, creative development and
+              social media presence.
+            </div>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">03</div>
+
+            <div class="service-title">
+              CREATIVE DESIGN
+            </div>
+
+            <div class="service-description">
+              Social creatives, promotional graphics and
+              branded visual content.
+            </div>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">04</div>
+
+            <div class="service-title">
+              SEO
+            </div>
+
+            <div class="service-description">
+              Search optimization and strategies designed
+              to improve online visibility.
+            </div>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">05</div>
+
+            <div class="service-title">
+              META ADS
+            </div>
+
+            <div class="service-description">
+              Facebook and Instagram advertising creative
+              and campaign support.
+            </div>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">06</div>
+
+            <div class="service-title">
+              GOOGLE ADS
+            </div>
+
+            <div class="service-description">
+              Search advertising and performance-focused
+              digital campaigns.
+            </div>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">07</div>
+
+            <div class="service-title">
+              REELS & SHORT-FORM
+            </div>
+
+            <div class="service-description">
+              Creative short-form video concepts and
+              social content.
+            </div>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">08</div>
+
+            <div class="service-title">
+              AMAZON A+ & LISTINGS
+            </div>
+
+            <div class="service-description">
+              A+ content, product presentation and
+              listing-related creative work.
+            </div>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         SKILLS
+    ======================================================== -->
+
+    <section class="skills">
+
+      <div class="container">
+
+        <div class="eyebrow reveal">
+          03 / EXPERTISE
+        </div>
+
+        <h2 class="section-title reveal">
+          WHERE CREATIVITY<br>
+          <span class="gradient-text">
+            MEETS TECHNOLOGY.
+          </span>
+        </h2>
+
+        <div class="skills-cloud">
+
+          <div class="skill">AI CONTENT</div>
+          <div class="skill">SOCIAL MEDIA</div>
+          <div class="skill">SEO</div>
+          <div class="skill">META ADS</div>
+          <div class="skill">GOOGLE ADS</div>
+          <div class="skill">CANVA</div>
+          <div class="skill">GRAPHIC DESIGN</div>
+          <div class="skill">REELS</div>
+          <div class="skill">CONTENT CREATION</div>
+          <div class="skill">AMAZON A+</div>
+          <div class="skill">DIGITAL MARKETING</div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         WORK
+    ======================================================== -->
+
+    <section id="work">
+
+      <div class="container">
+
+        <div class="eyebrow reveal">
+          04 / SELECTED WORK
+        </div>
+
+        <h2 class="section-title reveal">
+          WORK THAT<br>
+          <span class="gradient-text">
+            SPEAKS FOR ITSELF.
+          </span>
+        </h2>
+
+        <div class="portfolio-grid">
+
+          <article class="project reveal">
+
+            <div class="project-image p1"></div>
+
+            <div class="project-info">
+
+              <div class="project-category">
+                AI / CREATIVE
+              </div>
+
+              <div class="project-title">
+                AI PRODUCT VISUALS
+              </div>
+
+              <div class="project-view">
+                VIEW PROJECT ↗
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="project reveal">
+
+            <div class="project-image p2"></div>
+
+            <div class="project-info">
+
+              <div class="project-category">
+                SOCIAL MEDIA
+              </div>
+
+              <div class="project-title">
+                SOCIAL CREATIVE
+              </div>
+
+              <div class="project-view">
+                VIEW PROJECT ↗
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="project reveal">
+
+            <div class="project-image p3"></div>
+
+            <div class="project-info">
+
+              <div class="project-category">
+                REELS / VIDEO
+              </div>
+
+              <div class="project-title">
+                SHORT-FORM CONTENT
+              </div>
+
+              <div class="project-view">
+                VIEW PROJECT ↗
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="project reveal">
+
+            <div class="project-image p4"></div>
+
+            <div class="project-info">
+
+              <div class="project-category">
+                PAID ADVERTISING
+              </div>
+
+              <div class="project-title">
+                META ADS CREATIVE
+              </div>
+
+              <div class="project-view">
+                VIEW PROJECT ↗
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="project reveal">
+
+            <div class="project-image p5"></div>
+
+            <div class="project-info">
+
+              <div class="project-category">
+                AMAZON
+              </div>
+
+              <div class="project-title">
+                AMAZON A+ CONTENT
+              </div>
+
+              <div class="project-view">
+                VIEW PROJECT ↗
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="project reveal">
+
+            <div class="project-image p6"></div>
+
+            <div class="project-info">
+
+              <div class="project-category">
+                SOCIAL MEDIA
+              </div>
+
+              <div class="project-title">
+                BRAND SOCIAL PRESENCE
+              </div>
+
+              <div class="project-view">
+                VIEW PROJECT ↗
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         INSTAGRAM
+    ======================================================== -->
+
+    <section class="instagram">
+
+      <div class="container">
+
+        <div class="instagram-head">
+
+          <div>
+
+            <div class="eyebrow reveal">
+              05 / SOCIAL PRESENCE
+            </div>
+
+            <h2 class="section-title reveal">
+              FOLLOW<br>
+              <span class="gradient-text">
+                THE WORK.
+              </span>
+            </h2>
+
+          </div>
+
+          <a
+            href="https://www.instagram.com/growth_by_mayank/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary magnetic"
+          >
+            VIEW INSTAGRAM ↗
+          </a>
+
+        </div>
+
+
+        <div class="insta-grid">
+
+          <a
+            class="insta-card reveal"
+            href="https://www.instagram.com/growth_by_mayank/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=85"
+              alt="Creative digital design"
+              loading="lazy"
+            />
+          </a>
+
+
+          <a
+            class="insta-card reveal"
+            href="https://www.instagram.com/growth_by_mayank/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=800&q=85"
+              alt="AI creative artwork"
+              loading="lazy"
+            />
+          </a>
+
+
+          <a
+            class="insta-card reveal"
+            href="https://www.instagram.com/growth_by_mayank/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=85"
+              alt="Digital marketing creative"
+              loading="lazy"
+            />
+          </a>
+
+
+          <a
+            class="insta-card reveal"
+            href="https://www.instagram.com/growth_by_mayank/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=85"
+              alt="Technology and digital creativity"
+              loading="lazy"
+            />
+          </a>
+
+
+          <a
+            class="insta-card reveal"
+            href="https://www.instagram.com/growth_by_mayank/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=85"
+              alt="Marketing analytics"
+              loading="lazy"
+            />
+          </a>
+
+
+          <a
+            class="insta-card reveal"
+            href="https://www.instagram.com/growth_by_mayank/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=85"
+              alt="Creative marketing workspace"
+              loading="lazy"
+            />
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         PROCESS
+    ======================================================== -->
+
+    <section class="process" id="process">
+
+      <div class="container">
+
+        <div class="eyebrow reveal">
+          06 / PROCESS
+        </div>
+
+        <h2 class="section-title reveal">
+          FROM IDEA<br>
+          TO <span class="gradient-text">IMPACT.</span>
+        </h2>
+
+        <div class="process-track">
+
+          <div class="process-item reveal">
+            <div class="process-number">01</div>
+            <div class="process-name">DISCOVER</div>
+          </div>
+
+          <div class="process-item reveal">
+            <div class="process-number">02</div>
+            <div class="process-name">STRATEGIZE</div>
+          </div>
+
+          <div class="process-item reveal">
+            <div class="process-number">03</div>
+            <div class="process-name">CREATE</div>
+          </div>
+
+          <div class="process-item reveal">
+            <div class="process-number">04</div>
+            <div class="process-name">LAUNCH</div>
+          </div>
+
+          <div class="process-item reveal">
+            <div class="process-number">05</div>
+            <div class="process-name">OPTIMIZE</div>
+          </div>
+
+          <div class="process-item reveal">
+            <div class="process-number">06</div>
+            <div class="process-name">GROW</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         WHY
+    ======================================================== -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="eyebrow reveal">
+          WHY MAYANK
+        </div>
+
+        <h2 class="section-title reveal">
+          MORE THAN<br>
+          <span class="gradient-text">
+            JUST CONTENT.
+          </span>
+        </h2>
+
+        <div class="why-list">
+
+          <div class="why-item reveal">
+
+            <div class="why-title">
+              AI-FIRST
+            </div>
+
+            <div class="why-copy">
+              Using modern AI tools to improve creative
+              workflows, concepts and content production.
+            </div>
+
+          </div>
+
+
+          <div class="why-item reveal">
+
+            <div class="why-title">
+              CREATIVE
+            </div>
+
+            <div class="why-copy">
+              Combining visual design, storytelling and
+              marketing instead of creating generic content.
+            </div>
+
+          </div>
+
+
+          <div class="why-item reveal">
+
+            <div class="why-title">
+              DIGITAL
+            </div>
+
+            <div class="why-copy">
+              Connecting social media, SEO, advertising and
+              content into one digital approach.
+            </div>
+
+          </div>
+
+
+          <div class="why-item reveal">
+
+            <div class="why-title">
+              GROWTH
+            </div>
+
+            <div class="why-copy">
+              Building digital work with a clear purpose:
+              better visibility, stronger presence and
+              meaningful growth.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         CTA
+    ======================================================== -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="cta-inner">
+
+          <div class="eyebrow">
+            LET'S CREATE
+          </div>
+
+          <h2 class="cta-title">
+            HAVE AN IDEA?<br>
+            LET'S MAKE<br>
+            IT REAL.
+          </h2>
+
+          <p class="cta-copy">
+            Have a brand, project or idea in mind?
+            Let's turn it into something powerful,
+            creative and built for the digital world.
+          </p>
+
+          <div class="cta-buttons">
+
+            <a
+              href="https://wa.me/917678616675"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary magnetic"
+            >
+              <span>START A CONVERSATION ↗</span>
+            </a>
+
+            <a
+              href="mailto:mayankkumer101@gmail.com"
+              class="btn btn-secondary magnetic"
+            >
+              <span>SEND AN EMAIL ↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         CONTACT
+    ======================================================== -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="eyebrow reveal">
+          07 / CONTACT
+        </div>
+
+        <h2 class="section-title reveal">
+          LET'S
+          <span class="gradient-text">
+            TALK.
+          </span>
+        </h2>
+
+
+        <div class="contact-grid">
+
+          <a
+            class="contact-card reveal magnetic"
+            href="https://wa.me/917678616675"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact Mayank on WhatsApp"
+          >
+
+            <div class="contact-icon">
+              WA
+            </div>
+
+            <div>
+
+              <div class="contact-name">
+                WHATSAPP
+              </div>
+
+              <div class="contact-value">
+                +91 7678616675
+              </div>
+
+            </div>
+
+            <div class="contact-arrow">
+              ↗
+            </div>
+
+          </a>
+
+
+          <a
+            class="contact-card reveal magnetic"
+            href="mailto:mayankkumer101@gmail.com"
+            aria-label="Email Mayank Rajwanshi"
+          >
+
+            <div class="contact-icon">
+              @
+            </div>
+
+            <div>
+
+              <div class="contact-name">
+                EMAIL
+              </div>
+
+              <div class="contact-value">
+                mayankkumer101@gmail.com
+              </div>
+
+            </div>
+
+            <div class="contact-arrow">
+              ↗
+            </div>
+
+          </a>
+
+
+          <a
+            class="contact-card reveal magnetic"
+            href="https://www.instagram.com/growth_by_mayank/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mayank Rajwanshi Instagram"
+          >
+
+            <div class="contact-icon">
+              IG
+            </div>
+
+            <div>
+
+              <div class="contact-name">
+                INSTAGRAM
+              </div>
+
+              <div class="contact-value">
+                @growth_by_mayank
+              </div>
+
+            </div>
+
+            <div class="contact-arrow">
+              ↗
+            </div>
+
+          </a>
+
+
+          <a
+            class="contact-card reveal magnetic"
+            href="https://www.linkedin.com/in/mayank-rajwanshi-66a420417"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mayank Rajwanshi LinkedIn"
+          >
+
+            <div class="contact-icon">
+              in
+            </div>
+
+            <div>
+
+              <div class="contact-name">
+                LINKEDIN
+              </div>
+
+              <div class="contact-value">
+                Mayank Rajwanshi
+              </div>
+
+            </div>
+
+            <div class="contact-arrow">
+              ↗
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       BACK TO TOP
+  ========================================================== -->
+
+  <button
+    class="back-top"
+    id="backTop"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-logo">
+        MAYANK
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Mayank Rajwanshi. All Rights Reserved.
+        </span>
+
+        <span>
+          AI × DIGITAL MARKETING × CREATIVE GROWTH
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    /* =========================================================
+       INTRO ANIMATION
+    ========================================================= */
+
+    const introScreen =
+      document.getElementById("introScreen");
+
+    window.addEventListener("load", () => {
+
+      setTimeout(() => {
+
+        introScreen.classList.add("hide");
+
+        document.body.classList.remove("loading");
+
+      }, 2700);
+
+    });
+
+
+    /* =========================================================
+       NAVBAR SCROLL
+    ========================================================= */
+
+    const navbar =
+      document.getElementById("navbar");
+
+    function handleNavbar() {
+
+      if (window.scrollY > 30) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+
+    }
+
+    window.addEventListener(
+      "scroll",
+      handleNavbar,
+      { passive: true }
+    );
+
+    handleNavbar();
+
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================= */
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const mobileLinks =
+      document.getElementById("mobileLinks");
+
+    menuBtn.addEventListener("click", () => {
+
+      const isOpen =
+        mobileLinks.classList.toggle("open");
+
+      menuBtn.classList.toggle(
+        "active",
+        isOpen
+      );
+
+      menuBtn.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+    });
+
+
+    document
+      .querySelectorAll(".mobile-links a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          mobileLinks.classList.remove("open");
+
+          menuBtn.classList.remove("active");
+
+          menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
+      });
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const revealObserver =
+      new IntersectionObserver(
+        (entries, observer) => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+    revealElements.forEach(element => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* =========================================================
+       EXPERIENCE COUNTER
+    ========================================================= */
+
+    const experienceNumber =
+      document.getElementById(
+        "experienceNumber"
+      );
+
+    let experienceStarted = false;
+
+    const experienceObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (
+              entry.isIntersecting &&
+              !experienceStarted
+            ) {
+
+              experienceStarted = true;
+
+              let current = 0;
+
+              const target = 1;
+
+              const duration = 1200;
+
+              const start =
+                performance.now();
+
+              function animateExperience(now) {
+
+                const progress =
+                  Math.min(
+                    (now - start) /
+                    duration,
+                    1
+                  );
+
+                const eased =
+                  1 -
+                  Math.pow(
+                    1 - progress,
+                    3
+                  );
+
+                current =
+                  Math.floor(
+                    eased * target
+                  );
+
+                experienceNumber.textContent =
+                  String(current)
+                    .padStart(2, "0");
+
+                if (progress < 1) {
+
+                  requestAnimationFrame(
+                    animateExperience
+                  );
+
+                } else {
+
+                  experienceNumber.textContent =
+                    "01";
+
+                }
+
+              }
+
+              requestAnimationFrame(
+                animateExperience
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: .5
+        }
+      );
+
+    experienceObserver.observe(
+      experienceNumber
+    );
+
+
+    /* =========================================================
+       MAGNETIC BUTTONS
+    ========================================================= */
+
+    const magneticElements =
+      document.querySelectorAll(
+        ".magnetic"
+      );
+
+    if (
+      window.matchMedia(
+        "(pointer:fine)"
+      ).matches
+    ) {
+
+      magneticElements.forEach(element => {
+
+        element.addEventListener(
+          "mousemove",
+          event => {
+
+            const rect =
+              element.getBoundingClientRect();
+
+            const x =
+              event.clientX -
+              rect.left -
+              rect.width / 2;
+
+            const y =
+              event.clientY -
+              rect.top -
+              rect.height / 2;
+
+            element.style.transform =
+              `translate(${x * .12}px, ${y * .12}px)`;
+
+          }
+        );
+
+        element.addEventListener(
+          "mouseleave",
+          () => {
+
+            element.style.transform =
+              "";
+
+          }
+        );
+
+      });
+
+    }
+
+
+    /* =========================================================
+       HERO ORB MOUSE MOVEMENT
+    ========================================================= */
+
+    const heroOrb =
+      document.getElementById(
+        "heroOrb"
+      );
+
+    if (
+      heroOrb &&
+      window.matchMedia(
+        "(pointer:fine)"
+      ).matches
+    ) {
+
+      window.addEventListener(
+        "mousemove",
+        event => {
+
+          const x =
+            (event.clientX /
+              window.innerWidth -
+              .5) *
+            30;
+
+          const y =
+            (event.clientY /
+              window.innerHeight -
+              .5) *
+            30;
+
+          heroOrb.style.transform =
+            `translate(${x}px, ${y}px)`;
+
+        },
+        { passive: true }
+      );
+
+    }
+
+
+    /* =========================================================
+       BACK TO TOP
+    ========================================================= */
+
+    const backTop =
+      document.getElementById(
+        "backTop"
+      );
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (window.scrollY > 700) {
+
+          backTop.classList.add("show");
+
+        } else {
+
+          backTop.classList.remove("show");
+
+        }
+
+      },
+      { passive: true }
+    );
+
+
+    backTop.addEventListener(
+      "click",
+      () => {
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+    );
+
+
+    /* =========================================================
+       SMOOTH INTERNAL ANCHORS
+    ========================================================= */
+
+    document
+      .querySelectorAll(
+        'a[href^="#"]'
+      )
+      .forEach(anchor => {
+
+        anchor.addEventListener(
+          "click",
+          event => {
+
+            const id =
+              anchor.getAttribute("href");
+
+            if (
+              !id ||
+              id === "#"
+            ) return;
+
+            const target =
+              document.querySelector(id);
+
+            if (!target) return;
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+
+          }
+        );
+
+      });
+
+
+    /* =========================================================
+       CURSOR GLOW ON DESKTOP
+    ========================================================= */
+
+    if (
+      window.matchMedia(
+        "(pointer:fine)"
+      ).matches
+    ) {
+
+      const cursor =
+        document.createElement("div");
+
+      cursor.style.position =
+        "fixed";
+
+      cursor.style.width =
+        "12px";
+
+      cursor.style.height =
+        "12px";
+
+      cursor.style.borderRadius =
+        "50%";
+
+      cursor.style.background =
+        "rgba(115,87,255,.45)";
+
+      cursor.style.pointerEvents =
+        "none";
+
+      cursor.style.zIndex =
+        "9998";
+
+      cursor.style.filter =
+        "blur(3px)";
+
+      cursor.style.transform =
+        "translate(-50%, -50%)";
+
+      cursor.style.opacity =
+        "0";
+
+      cursor.style.transition =
+        "opacity .2s ease";
+
+      document.body.appendChild(
+        cursor
+      );
+
+      window.addEventListener(
+        "mousemove",
+        event => {
+
+          cursor.style.left =
+            event.clientX + "px";
+
+          cursor.style.top =
+            event.clientY + "px";
+
+          cursor.style.opacity =
+            "1";
+
+        },
+        { passive: true }
+      );
+
+      document.addEventListener(
+        "mouseleave",
+        () => {
+
+          cursor.style.opacity =
+            "0";
+
+        }
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
